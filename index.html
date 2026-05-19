@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!-- title of the game -->
+
+    <header class="heading">
+
+        <h1 class="game-title">Money Game (v1.0.0)</h1>
+
+    </header>
+
+    <!-- button to open the shop -->
+
+    <button onclick="openShop()" class="shop-btn">💰</button>
+
+    <!-- this is the shop pannel where all the shop items will be -->
+
+    <div class="shop-pannel shop-overlay">
+
+        <!-- to close the shop -->
+
+        <button onclick="closeShop()" class="close-shop">❌</button>
+
+        <!-- this is for bulk buying -->
+
+        <div id="bulkControls">
+
+            <button onclick="setBulk(1)">1x</button>
+            <button onclick="setBulk(10)">10x</button>
+            <button onclick="setBulk(100)">100x</button>
+
+        </div>
+
+        <!-- all the shop items -->
+
+        <div id="shopItems"></div>
+
+    </div>
+
+    <!-- this is to open the settings -->
+
+    <button class="settings-btn" onclick="openSettings()">⚙️</button>
+
+    <!-- this is the settings pannel where all the settings will be -->
+
+    <div class="setting-panel settings-overlay" id="settingPannel">
+        <button onclick="closeSettings()" class="close-settings">❌</button>
+
+        <!-- this is for the settings stat -->
+
+        <button onclick="statsOpen()" class="stats">📊</button>
+
+        <!-- to clear all the data -->
+
+        <button onclick="clearData()" class="clear-data">Clear Data</button>
+    </div>
+
+    <!-- this is the stats pannel -->
+
+    <div class="stats-pannel stats-overlay stats-container">
+
+        <!-- to close the stats -->
+
+        <button onclick="statsClose()" class="close-stats">❌</button>
+
+        <!-- this is the info inside the stats -->
+
+        <div class="stats-box">
+
+            <div class="stats-card">
+                <p>Total Earned</p>
+                <span id="totalMoneyStat">0</span>
+            </div>
+
+            <div class="stats-card">
+                <p>Total Clicked</p>
+                <span id="totalClickedStat">0</span>
+            </div>
+
+            <div class="stats-card">
+                <p>Total Passive</p>
+                <span id="totalPassiveStat">0</span>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- this is to style the money and days -->
+
+    <div class="current-day-and-money-stats">
+
+        <div class="day-div">
+
+        <h3 class="days-tag">Days:</h3>
+        <div class="days">
+
+            <!-- this is where the days will be displayed -->
+
+            <h3 class="current-days" id="currentDays">0</h3>
+
+        </div>
+
+        </div>
+
+        <div class="money-div">
+
+            <h3 class="money-tag">Money:</h3>
+            <div class="money">
+
+                <!-- this is where the money will be displayed -->
+                
+                <h3 class="current-money" id="currentMoney">0</h3>
+                <h4 id="moneyPerSecond">0/sec</h4>
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- this is the coin that is clickced to gain money -->
+
+    <div class="money-area">
+        <button class="coin-img" onclick="clicker()"></button>
+    </div>
+
+</body>
+</html>
